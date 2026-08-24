@@ -38,35 +38,6 @@ ifmove/
 └── README.md         → esta documentação
 ```
 
-## Como rodar localmente
-
-A câmera do navegador só funciona em `HTTPS` ou em `localhost` — não abra o `index.html` direto clicando duas vezes (URL `file://`), pois o navegador vai bloquear o acesso à câmera.
-
-Rode um servidor local simples a partir da pasta do projeto:
-
-```bash
-# com Python instalado
-python3 -m http.server 8000
-
-# ou, com Node.js instalado
-npx serve .
-```
-
-Depois acesse `http://localhost:8000` no navegador.
-
-## Como publicar para todos usarem
-
-### Opção 1 — GitHub Pages (recomendado)
-1. Suba os arquivos para um repositório no GitHub.
-2. Vá em **Settings → Pages**.
-3. Em **Source**, selecione a branch `main` e a pasta `/root`.
-4. Salve. O link ficará algo como `https://seu-usuario.github.io/IFmove`.
-
-### Opção 2 — Netlify Drop
-1. Acesse [app.netlify.com/drop](https://app.netlify.com/drop).
-2. Arraste a pasta do projeto.
-3. Um link `https://` é gerado automaticamente.
-
 ## Tecnologias usadas
 
 - HTML, CSS e JavaScript puro (sem frameworks, sem build step)
@@ -76,9 +47,6 @@ Depois acesse `http://localhost:8000` no navegador.
 ## Possíveis próximos passos
 
 - Adicionar mais exercícios (prancha, alongamento, caminhada no lugar)
-- Ranking coletivo entre turmas ou departamentos (exigiria um backend simples para guardar pontuações)
-- Avatares personalizáveis que evoluem visualmente com os pontos
-- Modo "dupla" com duas câmeras/dispositivos sincronizados
 
 ## Créditos
 
