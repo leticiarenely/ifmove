@@ -4,7 +4,6 @@
     { tag:'automático · visão computacional', manual:false, name:'Polichinelo', desc:'Braços e pernas são rastreados para validar cada salto completo.', pts:'8 pts / repetição' },
     { tag:'automático · visão computacional', manual:false, name:'Flexão', desc:'O ângulo do cotovelo é medido para confirmar cada flexão completa. Posicione o celular de lado, no chão, para a câmera enxergar o corpo inteiro.', pts:'12 pts / repetição' },
     { tag:'manual · em breve com IA', manual:true, name:'Caminhada pelo campus', desc:'Faça uma volta por um trajeto do campus e registre como se sentiu ao final.', pts:'15 pts' },
-    { tag:'manual · em breve com IA', manual:true, name:'Alongamento guiado', desc:'Siga uma sequência de 3 minutos de alongamento entre uma aula e outra.', pts:'15 pts' },
     { tag:'manual · em breve com IA', manual:true, name:'Escada em vez de elevador', desc:'Suba pelo menos 2 andares de escada e registre a missão concluída.', pts:'15 pts' },
     { tag:'manual · em breve com IA', manual:true, name:'Convide um colega', desc:'Jogue em dupla — movimento em grupo rende pontos para os dois.', pts:'15 pts' },
   ];
