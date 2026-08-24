@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IFMove — Campus em Movimento</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Proposta de jogo digital · roteiro</div>
+  <h1>IFMove</h1>
+  <p>Um jogo de bem-estar para todo o campus. Sua câmera do celular reconhece seu movimento em tempo real, conta as repetições e valida a postura — direto no navegador.</p>
+</header>
+
+<main>
+  <div class="stage">
+    <div class="camera-card">
+      <div class="video-wrap">
+        <video id="video" playsinline autoplay muted></video>
+        <canvas id="overlay"></canvas>
+        <div class="cam-overlay-msg" id="camMsg">
+          <div class="eyebrow" style="font-size:10px;">visão computacional</div>
+          <p id="camMsgText">Ative a câmera para o MoveVision reconhecer seus movimentos e começar a contar pontos.</p>
+          <button class="btn-go" id="startBtn">Ativar câmera</button>
+        </div>
+      </div>
+      <div class="mission-select">
+        <button class="mission-pill active" data-mode="squat">Agachamento</button>
+        <button class="mission-pill" data-mode="jack">Polichinelo</button>
+        <button class="mission-pill" data-mode="pushup">Flexão</button>
+      </div>
+      <div class="cam-footer">
+        <span><span class="status-dot" id="statusDot"></span><span class="status-text" id="statusText">câmera desligada</span></span>
+        <button class="btn-ghost" id="stopBtn" disabled>Encerrar sessão</button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="stat-row">
+        <div class="stat-box">
+          <div class="stat-label">Repetições</div>
+          <div class="stat-value" id="repCount">0</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Pontos</div>
+          <div class="stat-value" id="pointCount">0</div>
+        </div>
+      </div>
+
+      <div class="level-box">
+        <div class="stat-label">Nível de movimento</div>
+        <div class="level-name" id="levelName">Sedentário</div>
+        <div class="bar-track"><div class="bar-fill" id="levelBar" style="width:0%"></div></div>
+        <div class="level-hint" id="levelHint">0 / 50 pts para o próximo nível</div>
+      </div>
+
+      <div>
+        <div class="stat-label" style="margin-bottom:8px;">Registro da sessão</div>
+        <div class="feed" id="feed"></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="missions">
+    <div class="node-divider"><div class="dot"></div><div class="line"></div></div>
+    <div class="section-title">Missões</div>
+    <div class="missions-grid" id="missionsGrid"></div>
+  </section>
+
+  <section class="about">
+    <div class="node-divider"><div class="dot"></div><div class="line"></div></div>
+    <div class="section-title">Sobre a proposta</div>
+    <div class="about-grid">
+      <div class="about-item node-bullet">
+        <div class="stem"><div class="dot"></div><div class="stick"></div></div>
+        <div><div class="k">Tema</div><div class="v">Sedentarismo e atividade física da comunidade acadêmica — longas horas sentado em aula, biblioteca e laboratório, com pouco incentivo ao movimento.</div></div>
+      </div>
+      <div class="about-item node-bullet">
+        <div class="stem"><div class="dot"></div><div class="stick"></div></div>
+        <div><div class="k">Público-alvo</div><div class="v">Toda a comunidade acadêmica — estudantes, professores e servidores.</div></div>
+      </div>
+      <div class="about-item node-bullet">
+        <div class="stem"><div class="dot"></div><div class="stick"></div></div>
+        <div><div class="k">Tecnologia</div><div class="v">Visão computacional pela câmera do próprio celular reconhece a pose do corpo e valida os exercícios em tempo real — sem QR Code fixo, sem infraestrutura extra no campus.</div></div>
+      </div>
+      <div class="about-item node-bullet">
+        <div class="stem"><div class="dot"></div></div>
+        <div><div class="k">Por que importa</div><div class="v">Transforma pausas ativas em algo leve e acessível em qualquer ponto do campus, incentivando uma cultura de movimento coletivo e reduzindo os riscos do sedentarismo.</div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>MOVEVISION · PROTÓTIPO · O VÍDEO NÃO É GRAVADO NEM ENVIADO — TODO O PROCESSAMENTO ACONTECE NO SEU NAVEGADOR</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.20.0/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection@2.1.3/dist/pose-detection.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
