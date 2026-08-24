@@ -1,4 +1,6 @@
-# MoveVision — Campus em Movimento
+# IFMove — Campus em Movimento
+**Discente:** Letícia Renelly · **Docente:** Roselle · **Disciplina:** Educação Física - EDF · **Semestre:** 4º
+
 
 Proposta de jogo digital para combater o sedentarismo na comunidade acadêmica. Em vez de QR Codes espalhados pelo campus, o **IFMove** usa a câmera do próprio celular e visão computacional para reconhecer os exercícios do jogador em tempo real, contar repetições e dar pontos — tudo direto no navegador, sem instalar nada.
 
